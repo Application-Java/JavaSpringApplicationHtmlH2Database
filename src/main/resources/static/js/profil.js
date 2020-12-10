@@ -4,7 +4,7 @@ console.log("loaded");
 /////////////////////////////////////////////////RECUPERATION DES DONNEES DE L'UTILISATEUR///////////////////////////////////
    
 $.ajax({
-    url: "http://localhost:8080/utilisateur/" + sessionStorage.getItem("login")
+    url: "./utilisateur/" + sessionStorage.getItem("login")
     }).done(function(d) {
     $("#fieldLogin").val(d.login);
     $("#fieldName").val(d.nom);
@@ -36,7 +36,7 @@ function modifUser()
             type: 'put',
             data: fcjson,
             contentType: "application/json; charset=utf-8",
-            url: "http://localhost:8080/utilisateur",
+            url: "./utilisateur",
             headers: 
             {
                 "login":recupLogin,

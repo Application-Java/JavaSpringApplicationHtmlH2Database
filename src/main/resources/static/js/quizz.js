@@ -369,7 +369,7 @@ function valideReponse(e) {
         $.ajax({
             type: 'POST',
             headers: {'login': recupLogin, 'deckId': numDeck},
-            url: 'http://localhost:8080/scores',
+            url: './scores',
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(resultat),
             // success: function(data) {

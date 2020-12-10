@@ -3,7 +3,7 @@
 //     $.ajax({
 //         type: 'POST',
 //         headers: {'login': login, 'deckId': deckId},
-//         url: 'http://localhost:8080/scores',
+//         url: './scores',
 //         success: function(data) {
 //                  console.log(data);
 //                  alert('POST OK');
@@ -20,7 +20,7 @@ var password = sessionStorage.getItem('password');
 $.ajax({
     type: 'GET',
     headers: {'login': login},
-    url: 'http://localhost:8080/scores/all',
+    url: './scores/all',
     // success: function(data) {
     //     console.log(data);
     //     alert('Get OK');
@@ -34,7 +34,7 @@ $.ajax({
 
     $.ajax({
         type: 'GET',
-        url: "http://localhost:8080/deck/all",
+        url: "./deck/all",
         headers: {"login" : login, "password" : password},
         // success: function(data) {
         //     console.log(data);

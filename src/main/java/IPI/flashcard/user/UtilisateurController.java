@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @Controller
+@RestController
 @RequestMapping("/utilisateur")
 public class UtilisateurController {
 
@@ -44,7 +45,7 @@ public class UtilisateurController {
     }
 
     //METHOD POST (to create a user)
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "create", method = RequestMethod.POST)
     @ResponseBody
     public Utilisateur creer(@RequestBody Utilisateur u){
         u.setPassword(Utils.encrypt(u.getPassword()));

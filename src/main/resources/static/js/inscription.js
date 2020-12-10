@@ -48,11 +48,11 @@ function postUser(e)
 	var data = getData();
 	$.ajax({
 		type: "POST",
-		url: "http://localhost:8080/utilisateur",
+		url: "./utilisateur/create",
 		contentType: "application/json; charset=utf-8",
 		data: JSON.stringify(data)
 	}).done(function(){
-		window.location.href = "http://localhost:8080";
+		window.location.href = "./";
 	});
 }
 
@@ -63,7 +63,7 @@ function postUser(e)
 	// 	type: "post",
 	// 	data: JSON.stringify(data),
 	// 	contentType: "application/json; charset=utf-8",
-	// 	url: "http://localhost:8080/utilisateur"
+	// 	url: "./utilisateur"
 	// })
 // })
 

@@ -18,7 +18,7 @@ var newDeck=undefined;
 	console.log($("body").find("#nomListe").val());
 	$.ajax(
 		{
-			url: "http://localhost:8080/deck/cards",
+			url: "./deck/cards",
 			headers: 
 			{
 				"login":recupLogin,
@@ -207,7 +207,7 @@ function pushCreatedCard()
 			type: 'post',
 			data: fcjson,
 			contentType: "application/json; charset=utf-8",
-			url: "http://localhost:8080/deck",
+			url: "./deck",
 			headers: 
 			{
 				"login":recupLogin,
@@ -229,7 +229,7 @@ function ajoutCard()
 	var urlCard = document.getElementById("urlCard"+incremente).src;
 	var nomListe = document.getElementById("nomListe").value;
 
-	if(nomListe=="" || nomCard=="" || tradCard=="" || urlCard=="http://localhost:8080/creationListe.html") {
+	if(nomListe=="" || nomCard=="" || tradCard=="" || urlCard=="./creationListe.html") {
 		alert("Veuillez remplir les champs.");
 		console.log("pushCreatedCard_OFF");
 	}
@@ -280,7 +280,7 @@ function creationList()
 	$.ajax({type: 'post',
 			data: newDeck,
 			contentType: "application/json; charset=utf-8",
-			url: "http://localhost:8080/deck",
+			url: "./deck",
 			headers: 
 			{
 				"login":recupLogin,

@@ -456,7 +456,7 @@ function addExistingCardToDeck() // afficher les données.
     $.ajax(
         {
             type:"get",
-            url: "http://localhost:8080/deck/cards",
+            url: "./deck/cards",
             headers: 
             {
                 "login":recupLogin,
@@ -613,7 +613,7 @@ function pushCreatedCard()
             dataType: "json",
             data: fcjson,
             contentType: "application/json; charset=utf-8",
-            url: "http://localhost:8080/deck",
+            url: "./deck",
             headers: 
             {
                 "login":recupLogin,
