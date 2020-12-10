@@ -37,7 +37,7 @@ public class CardPdfController {
    @ResponseBody
     public ResponseEntity<InputStreamResource> cardsReport(@PathVariable("id") Integer id) throws IOException {
         //List<Card> cards = (List<Card>) cardRepository.findAll();
-         Deck deck =  deckRepo.findById(id).orElse(new Deck());;
+         Deck deck =  deckRepo.findById(id).orElse(new Deck());
          List <Card> cards =  deck.getCards();
 
         System.out.println("log" + cards);

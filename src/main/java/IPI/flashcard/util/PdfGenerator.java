@@ -67,8 +67,7 @@ public class PdfGenerator {
                 img.setAlignment(Element.ALIGN_CENTER);
                 paraDefinition.setAlignment(Element.ALIGN_CENTER);
                 document.add(paraNom);
-                document.add(img);
-                document.add(img);
+                document.add(img);              
                 document.add(paraDefinition);
                 // document.newPage();
 
